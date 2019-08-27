@@ -7,7 +7,6 @@ class AddColumnsToItems < ActiveRecord::Migration[5.2]
     add_column :items, :question1, :text
     add_column :items, :question2, :text
     add_column :items, :question3, :text
-    add_column :items, :user_id, :string
     add_column :items, :claimed, :boolean, default: false
   end
 end
