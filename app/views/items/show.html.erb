@@ -10,7 +10,7 @@
     <p><%= @item.description %></p>
     <p>Where: <%= @item.location %></p>
     <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
-    <button class="btn btn-success">Claim</button>
+  <%= link_to "Claim", new_item_claim_path(@item), class: 'button' %>
 
   </div>
 </div>

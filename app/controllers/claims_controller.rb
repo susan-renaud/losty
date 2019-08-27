@@ -1,15 +1,17 @@
 class ClaimsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   def new
+    @item = Item.find(params[:item_id])
     @claim = Claim.new
   end
 
   def create
     @item = Item.find(params[:item_id])
-    @claim = Claim.new(params[claim_params])
-    @claim.user = @item
+    @claim = Claim.new(claim_params)
+    @claim.user = current_user
+    @claim.item = @item
     if @claim.save
-      redirect_to new_claim_path
+      redirect_to new_item_path
     else
       redirect_to claims_path
     end
