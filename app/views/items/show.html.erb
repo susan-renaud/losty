@@ -1,11 +1,15 @@
 <div class="container">
   <div class="item-img">
-  <%= image_tag @item.photo %>
+    <% if @item.photo %>
+      <%= image_tag @item.photo, width: 100 %>
+
+    <% end %>
   </div>
   <div class="item-content">
     <h1><%= @item.name %></h1>
-    <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
     <p><%= @item.description %></p>
+    <p>Where: <%= @item.location %></p>
+    <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
     <button class="btn btn-success">Claim</button>
 
   </div>
