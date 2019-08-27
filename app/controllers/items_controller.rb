@@ -24,10 +24,10 @@ class ItemsController < ApplicationController
 
   #   def destroy
   #   end
-end
 
-private
+  # private
 
-def item_params
-  params.require(:item).permit(:name, :description, :location, :question1, :question2, :question3)
+  # def item_params
+  #   params.require(:item).permit(:name, :description, :location, :question1, :question2, :question3)
+  # end
 end
