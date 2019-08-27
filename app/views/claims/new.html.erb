@@ -1,0 +1,14 @@
+<div class="container">
+
+
+  <div class="claim-content">
+  <h1>Claim your item!</h1>
+      <%= simple_form_for(@claim) do |f| %>
+        <%= f.input :answer1 %>
+        <%= f.input :answer2 %>
+        <%= f.input :answer3 %>
+        <%= f.input :reward %>
+        <%= f.button :submit, class: 'btn btn-success'%>
+      <% end %>
+  </div>
+</div>
