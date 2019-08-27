@@ -31,5 +31,3 @@ class ItemsController < ApplicationController
   #   params.require(:item).permit(:name, :description, :location, :question1, :question2, :question3)
   # end
 end
-
-
