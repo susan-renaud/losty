@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Hello!</h1>
+  <div class="posts-cards">
+    <h1>My Posts</h1>
+      <% current_user.items.each do |item| %>
+      <p><%= item.name %></p>
+      <% end %>
+  </div>
+  </div>
