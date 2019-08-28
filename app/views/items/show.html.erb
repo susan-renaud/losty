@@ -18,7 +18,7 @@
       <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
     <% end %>
   </div>
-<h3>claims for this item</h3>
-  <%= current_user.claims.where(item: @item).count  %>
+  <h3>claims for this item</h3>
+    <%= current_user.claims.where(item: @item).count  %>
 
 </div>
