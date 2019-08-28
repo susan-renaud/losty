@@ -3,6 +3,16 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+
+    @items = Item.geocoded
+    @markers = @items.map do |item|
+      {
+        lat: item.latitude,
+        lng: item.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { item: item }),
+        popup: true
+      }
+    end
   end
 
   def new
@@ -21,6 +31,11 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    @marker = [{
+        lat: @item.latitude,
+        lng: @item.longitude,
+        popup: false
+      }]
   end
 
   def edit
