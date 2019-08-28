@@ -1,0 +1,7 @@
+  <h4><%= item.name %></h4>
+  <% if item.photo %>
+    <%= image_tag item.photo, width: 100 %>
+  <% end %>
+  <p><%= item.description %></p>
+  <p>Posted on: <%= item.created_at.strftime('%e %b %Y') %></p>
+  <p><%= item.location %></p>
