@@ -12,12 +12,13 @@
     <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
     <% if @item.user == current_user %>
       <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-success' %>
-    <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-success',
+      <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-success',
         data: { confirm: "Are you sure?" } %>
     <% else %>
-  <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
-  <% end %>
+      <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
+    <% end %>
   </div>
+
   <div class="items-map">
     <div
       id="map"
@@ -27,4 +28,6 @@
       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
   </div>
+  <h3>claims for this item</h3>
+    <%= current_user.claims.where(item: @item).count  %>
 </div>
