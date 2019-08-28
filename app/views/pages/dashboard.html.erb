@@ -8,9 +8,9 @@
   </div>
   <div class="claims-cards">
     <h1>My Claims</h1>
-      <% current_user.claims.each do |claim| %>
-      <p><%= link_to claim.item.name, item_path(claim)%></p>
-      <% end %>
+    <% current_user.claims.each do |claim| %>
+      <p><%= link_to claim.item.name, item_path(claim.item)%></p>
+    <% end %>
   </div>
   </div>
 
