@@ -11,10 +11,18 @@ class ClaimsController < ApplicationController
     @claim.user = current_user
     @claim.item = @item
     if @claim.save
-      redirect_to dashboard_path
+      redirect_to @item
     else
       render :new
     end
+  end
+
+  def destroy
+    @item = Item.find(params[:item_id])
+    claim = Claim.find(params[:id])
+    claim.destroy
+
+    redirect_to @item
   end
 
   private
