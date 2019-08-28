@@ -10,7 +10,12 @@
     <p><%= @item.description %></p>
     <p>Where: <%= @item.location %></p>
     <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
-  <%= link_to "Claim", new_item_claim_path(@item), class: 'button' %>
-
+    <% if @item.user == current_user %>
+      <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-success' %>
+    <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-success',
+        data: { confirm: "Are you sure?" } %>
+    <% else %>
+  <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
+  <% end %>
   </div>
 </div>
