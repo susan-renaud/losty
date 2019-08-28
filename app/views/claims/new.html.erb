@@ -4,10 +4,10 @@
   <div class="claim-content">
   <h1>Claim your item!</h1>
       <%= simple_form_for([@item,@claim]) do |f| %>
-        <%= f.input :answer1 %>
-        <%= f.input :answer2 %>
-        <%= f.input :answer3 %>
-        <%= f.input :reward %>
+        <%= f.input :answer1, label: @item.question1, placeholder: "Place your answer here" %>
+        <%= f.input :answer2, label: @item.question2, placeholder: "Place your answer here" %>
+        <%= f.input :answer3, label: @item.question3, placeholder: "Place your answer here" %>
+        <%= f.input :reward, collection: %w(pizza beer hug smile) %>
         <%= f.button :submit, class: 'btn btn-success'%>
       <% end %>
   </div>
