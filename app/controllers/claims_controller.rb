@@ -11,9 +11,9 @@ class ClaimsController < ApplicationController
     @claim.user = current_user
     @claim.item = @item
     if @claim.save
-      redirect_to new_item_path
+      redirect_to dashboard_path
     else
-      redirect_to claims_path
+      render :new
     end
   end
 
