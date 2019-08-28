@@ -1,10 +1,9 @@
 
-
 <h1>Looking for Something?</h1>
 <% @items.where(claimed: false).each do |item| %>
   <h4><%= item.name %></h4>
   <% if item.photo %>
-    <%= image_tag item.photo, width: 100 %>
+    <%= cl_image_tag item.photo, width: 100 %>
   <% end %>
   <p><%= item.description %></p>
   <p>Posted on: <%= item.created_at.strftime('%e %b %Y') %></p>
