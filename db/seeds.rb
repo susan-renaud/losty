@@ -32,12 +32,12 @@ Item.create(user: steph, name: 'Backpack', photo: 'https://images.unsplash.com/p
 
 Item.create(user: susan, name: 'Fancy fountain pen', photo: 'https://images.unsplash.com/photo-1457298483369-0a95d2b17fcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'This is a really nice fountain pen and I am sure the owner is missing it!',
-   location: 'Greenwich', question1: 'What color ink does it have?', question2: 'What color is the end of the pen?',
+   location: 'SE9 6BT', question1: 'What color ink does it have?', question2: 'What color is the end of the pen?',
   question3: 'What name is etched on the cap of the fountain pen?')
 
 Item.create(user: raquel, name: 'Gloves', photo: 'https://images.unsplash.com/photo-1515951806792-63ac4250f2f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
    description: 'I found these winter gloves at the library.',
-   location: 'Kings Cross', question1: 'Are the adult or childrens gloves?', question2: 'What color is the lining?',
+   location: 'Kings Cross, London', question1: 'Are the adult or childrens gloves?', question2: 'What color is the lining?',
   question3: 'There is a stain on them, what color is it?')
 
 
