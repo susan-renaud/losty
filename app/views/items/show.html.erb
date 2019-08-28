@@ -1,7 +1,7 @@
 <div class="container">
   <div class="item-img">
     <% if @item.photo %>
-      <%= image_tag @item.photo, width: 100 %>
+      <%= cl_image_tag @item.photo, width: 100 %>
 
     <% end %>
   </div>
