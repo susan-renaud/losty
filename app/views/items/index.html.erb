@@ -1,20 +1,21 @@
-  <h1>Looking for Something?</h1>
-        <% @items.each do |item| %>
-          <h4><%= item.name %></h4>
-          <% if item.photo %>
-            <%= cl_image_tag item.photo, width: 100 %>
-          <% end %>
-          <p><%= item.description %></p>
-          <p>Posted on: <%= item.created_at.strftime('%e %b %Y') %></p>
-          <p><%= item.location %></p>
-          <%= link_to "see details", item_path(item), class: 'btn btn-success' %>
-        <% end %>
 
-        <div
-          id="map"
-          style="width: 80%;
-          height: 400px;"
-          data-markers="<%= @markers.to_json %>"
-          data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-        </div>
+<h1>Looking for Something?</h1>
+<% @items.where(claimed: false).each do |item| %>
+  <h4><%= item.name %></h4>
+  <% if item.photo %>
+    <%= cl_image_tag item.photo, width: 100 %>
+  <% end %>
+  <p><%= item.description %></p>
+  <p>Posted on: <%= item.created_at.strftime('%e %b %Y') %></p>
+  <p><%= item.location %></p>
+  <%= link_to "see details", item_path(item), class: 'btn btn-success' %>
+<% end %>
+
+<div
+  id="map"
+  style="width: 80%;
+  height: 400px;"
+  data-markers="<%= @markers.to_json %>"
+  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
