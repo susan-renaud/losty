@@ -13,4 +13,6 @@
   <%= link_to "Claim", new_item_claim_path(@item), class: 'button' %>
 
   </div>
+  <h3>my claims for this</h3>
+  <%= current_user.claims.where(item: @item).count  %>
 </div>

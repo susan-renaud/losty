@@ -3,7 +3,15 @@
   <div class="posts-cards">
     <h1>My Posts</h1>
       <% current_user.items.each do |item| %>
-      <p><%= item.name %></p>
+       <p><%= link_to item.name, item_path(item) %></p>
+      <% end %>
+  </div>
+  <div class="claims-cards">
+    <h1>My Claims</h1>
+      <% current_user.claims.each do |claim| %>
+      <p><%= link_to claim.item.name, item_path(claim)%></p>
       <% end %>
   </div>
   </div>
+
+

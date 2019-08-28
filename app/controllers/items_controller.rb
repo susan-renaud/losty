@@ -21,6 +21,9 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find(params[:id])
+    # if claimed = false
+    #   redirect_to
+
   end
   #   def update
   #   end
