@@ -12,12 +12,13 @@
     <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
     <% if @item.user == current_user %>
       <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-success' %>
-    <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-success',
+      <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-success',
         data: { confirm: "Are you sure?" } %>
     <% else %>
-  <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
-  <% end %>
+      <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-success' %>
+    <% end %>
   </div>
-  <h3>my claims for this</h3>
+<h3>claims for this item</h3>
   <%= current_user.claims.where(item: @item).count  %>
+
 </div>
