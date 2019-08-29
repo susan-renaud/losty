@@ -39,6 +39,13 @@
   padding-right: 6px;
 }
 
+.nav-link {
+  color: #605a5a;
+  &:hover {
+    color: #605a5a;
+  }
+}
+
 .card-img {
   border-radius: 4px 4px 0 0;
   border: 1px solid #dddddd;
