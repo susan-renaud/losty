@@ -1,0 +1,22 @@
+.home-flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home-cont {
+  background-color: #79ebdf;
+  display: inline-block;
+  width: 80vw;
+  padding: 0 5vw;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont-lhs {
+  width: 50%;
+}
+
+.rhs-img {
+  width: 50%;
+}
