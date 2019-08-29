@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  background-color: rgba(121,235,223,0.2)
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,3 +12,52 @@
   width: 60px;
   border-radius: 50%;
 }
+
+.navbar-items {
+ padding:10px;
+}
+
+.collapse {
+  width:100%;
+}
+.navbar-nav {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.searchbar {
+  width:50vw;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-left:10px;
+}
+.flex {
+  display: flex;
+}
+
+.nav-item {
+padding-top:10px;
+margin-left:20px;
+}
+
+.nav-item #logout {
+padding-left:10px;
+  }
+
+.dashboard {
+  padding-top: 10px;
+}
+
+.form-control {
+  border-radius: 4px 0 0 4px;
+}
+
+.searchbtn {
+  border-radius: 0 4px 4px 0;
+}
+
+
+
+
+
+

@@ -1,9 +1,10 @@
-<%= form_tag items_path, method: :get do %>
+<%= form_tag items_path, method: :get, class: 'flex' do %>
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Find your item/pet!"
   %>
-  <%= submit_tag "Search", class: "btn btn-success" %>
+  <%= submit_tag "Search", class: "btn btn-success searchbtn" %>
+
 <% end %>
 
