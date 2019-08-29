@@ -17,11 +17,25 @@ class ClaimsController < ApplicationController
     end
   end
 
+  def accept
+    @claim = Claim.find(params[:id])
+    @item = @claim.item
+    @claim.update(accepted: "true")
+    @item.update(claimed: true)
+    redirect_to dashboard_path
+  end
+
+  def deny
+    @claim = Claim.find(params[:id])
+    @item = @claim.item
+    @claim.update(accepted: "false")
+    redirect_to dashboard_path
+  end
+
   def destroy
     @item = Item.find(params[:item_id])
     claim = Claim.find(params[:id])
     claim.destroy
-
     redirect_to @item
   end
 
