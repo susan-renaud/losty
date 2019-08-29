@@ -13,6 +13,11 @@ class ItemsController < ApplicationController
         popup: true
       }
     end
+    if params[:query].present?
+      @items = Item.search_by_name_and_location(params[:query])
+    else
+      @items = Item.all
+    end
   end
 
   def new
