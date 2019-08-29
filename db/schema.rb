@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_164820) do
+ActiveRecord::Schema.define(version: 2019_08_29_103059) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2019_08_28_164820) do
     t.string "reward"
     t.bigint "item_id"
     t.bigint "user_id"
-    t.boolean "accepted", default: false
+    t.string "accepted", default: "pending"
     t.index ["item_id"], name: "index_claims_on_item_id"
     t.index ["user_id"], name: "index_claims_on_user_id"
   end
