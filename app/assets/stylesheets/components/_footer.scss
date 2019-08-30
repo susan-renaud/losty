@@ -6,8 +6,8 @@
   height: 60px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-  // position: fixed;
-  bottom: 0;
+  position: absolute;
+  // bottom: 0;
   width: 100%;
 }
 .footer-links {
@@ -24,6 +24,6 @@
 .footer-links a:hover {
   opacity: 1;
 }
-.footer .fa-heart {
+.footer .fa-compass {
   color: #D23333;
 }
