@@ -1,13 +1,15 @@
 
-<h1>Losty!</h1>
+
 <div class="home-flex">
   <div class="home-cont">
     <div class="cont-lhs">
-      <h3>Your live go to plataform for when your go Oopsie, lost something!</h3>
-      <%= link_to "found something?", new_item_path, class: "btn btn-success" %>
-      <%= link_to "See all items", items_path, class: "btn btn-success" %>
+      <h2>Have you lost or found something?</h2>
+      <p>Losty is a platform that connects people who have lost items or pets to those who have found them. We are a community that seeks to promote kindness and offers people a streamlined database to share information to help return items and pets safely back to their owners.</p>
+      <br>
+      <br>
+      <h5><%= link_to "See all items ➝", items_path, class: "item-link" %></h5>
     </div>
-    <img src="<%= image_path('logo.png') %>" alt="" class="rhs-img">
+    <img src="<%= image_path('lostypic.png') %>" alt="" class="rhs-img">
   </div>
 </div>
     <h3 class="cards-title">Most recent found items...</h3>
