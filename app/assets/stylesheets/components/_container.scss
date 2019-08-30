@@ -4,19 +4,43 @@
   justify-content: center;
 }
 .home-cont {
-  background-color: #79ebdf;
+  margin-top:40px;
+  background-color: rgba(121,235,223,0.3);
   display: inline-block;
-  width: 80vw;
+  width: 87vw;
+  height: 55vh;
   padding: 0 5vw;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  position: relative;
 }
 .cont-lhs {
-  width: 50%;
+  width: 45%;
+  position: absolute;
+  left: 50px;
+  top: 70px;
 }
 
 .rhs-img {
-  width: 50%;
+  width: 40%;
+  // padding-top: 56px;
+  position: absolute;
+  bottom: 0;
+  right: 50px;
 }
+
+.item-link {
+  color: black;
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
