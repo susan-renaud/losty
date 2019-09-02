@@ -1,71 +1,70 @@
 <div class="container-fluid my-flexy">
 
-  <div class="main-info">
-    <div class="item-img">
-      <% if @item.photo %>
-        <%= cl_image_tag @item.photo, width: 100 %>
-      <% end %>
-    </div>
-
-    <div class="item-content">
-      <h1><%= @item.name %></h1>
-      <p><%= @item.description %></p>
-      <p>Where: <%= @item.location %></p>
-      <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
-
-  <!-- WHEN USER OWNS THE ITEM -->
-      <% if user_signed_in? %>
-
-        <% if @item.user == current_user %>
-          <% if @item.claimed %>
-            <h3>ITEM CLAIMED</h3>
-          <% else %>
-            <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-outline-warning' %>
-            <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-outline-danger',
-              data: { confirm: "Are you sure?" } %>
-
-            <% @item.claims.each do |claim| %>
-              <div class="claim">
-                <h1>Claimer Answers</h1>
-                <h5>Q1: <%= @item.question1 %></h5>
-                <p><%= claim.answer1 %></p>
-                <h5>Q2: <%= @item.question2 %></h5>
-                <p><%= claim.answer2 %></p>
-                <h5>Q3: <%= @item.question3 %></h5>
-                <p><%= claim.answer3 %></p>
-                <%= link_to "Accept Claim", accept_claim_path(claim), method: :post, class: 'btn btn-outline-success' %>
-                <%= link_to "Deny Claim", deny_claim_path(claim), method: :post, class: 'btn btn-outline-danger' %>
+<div>
+  <div class="card-box-show">
+      <div class="cards-show">
+            <% if @item.photo %>
+                <div class="card-img-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@item.photo, crop: :fill) %>)">
+                  <% end %>
+                </div>
+              <div class="info-cont-show">
+                <h4 class="mb0-show"><b><%= @item.name %></b></h4>
+                <p class="mb1-show"><%= @item.description %></p>
+                <p><i class="fas fa-map-marker-alt"></i><%= @item.location %></p>
+                <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
               </div>
-            <% end %>
-
-          <% end %>
-        <% elsif !@item.claims.pluck(:user_id).include?(current_user.id) %>
+              <div><%= cl_image_tag @item.user.photo, class: "avatar card-avatar-show" %>
+              </div>
+    <!-- WHEN USER OWNS THE ITEM -->
+      </div>
+        <% if user_signed_in? %>
+          <% if @item.user == current_user %>
             <% if @item.claimed %>
-              CLAIMED!
+              <h3>ITEM CLAIMED</h3>
             <% else %>
-              <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-outline-success' %>
+              <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-outline-warning' %>
+                    <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-outline-danger',
+                      data: { confirm: "Are you sure?" } %>
+              <% @item.claims.each do |claim| %>
+                <div class="claim">
+                  <h1>Claimer Answers</h1>
+                  <h5>Q1: <%= @item.question1 %></h5>
+                  <p><%= claim.answer1 %></p>
+                  <h5>Q2: <%= @item.question2 %></h5>
+                  <p><%= claim.answer2 %></p>
+                  <h5>Q3: <%= @item.question3 %></h5>
+                  <p><%= claim.answer3 %></p>
+                  <%= link_to "Accept Claim", accept_claim_path(claim), method: :post, class: 'btn btn-outline-success' %>
+                  <%= link_to "Deny Claim", deny_claim_path(claim), method: :post, class: 'btn btn-outline-danger' %>
+                </div>
+              <% end %>
             <% end %>
-        <% else %>
-          <!-- WHEN USER HAS MADE A CLAIM -->
-          <% if @item.claimed && @item.claims.find_by(user: current_user).accepted == "true" %>
-            <h3>YOU GOT THE ITEM</h3>
-          <% elsif @item.claims.where(accepted: "true").first && @item.claims.where(accepted: "true").first.user != current_user %>
-            <h3>SOMEONE ELSE GOT IT</h3>
-          <% elsif @item.claims.where(user: current_user).first.accepted == "false" %>
-            <h3>Your claim was denied</h3>
+          <% elsif !@item.claims.pluck(:user_id).include?(current_user.id) %>
+              <% if @item.claimed %>
+                CLAIMED!
+              <% else %>
+                <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-outline-success' %>
+              <% end %>
           <% else %>
-            <h3>Your claim is still pending</h3>
-            <% @claim = @item.claims.find_by(user: current_user) %>
-            <%= link_to "Delete Claim", item_claim_path(@item,@claim), method: :delete, class: 'btn btn-outline-danger',
-            data: { confirm: "Are you sure?" } %>
+            <!-- WHEN USER HAS MADE A CLAIM -->
+            <% if @item.claimed && @item.claims.find_by(user: current_user).accepted == "true" %>
+              <h3>YOU GOT THE ITEM</h3>
+            <% elsif @item.claims.where(accepted: "true").first && @item.claims.where(accepted: "true").first.user != current_user %>
+              <h3>SOMEONE ELSE GOT IT</h3>
+            <% elsif @item.claims.where(user: current_user).first.accepted == "false" %>
+              <h3>Your claim was denied</h3>
+            <% else %>
+              <h3>Your claim is still pending</h3>
+              <% @claim = @item.claims.find_by(user: current_user) %>
+              <%= link_to "Delete Claim", item_claim_path(@item,@claim), method: :delete, class: 'btn btn-outline-danger',
+              data: { confirm: "Are you sure?" } %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-    </div>
 
+    </div>
     <h3>claims for this item <%= @item.claims.count %></h3>
   </div>
-
   <div
     id="map"
     style=""
