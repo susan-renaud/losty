@@ -1,0 +1,5 @@
+meta_product_name: "Losty!"
+meta_title: "Losty! - Your online platform for finding your lost items!"
+meta_description: "Losty is a platform that connects people who have lost items or pets to those who have found them. We are a community that seeks to promote kindness and offers people a streamlined database to share information to help return items and pets safely back to their owners."
+meta_image: "Losty.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
