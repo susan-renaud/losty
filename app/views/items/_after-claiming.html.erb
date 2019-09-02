@@ -1,0 +1,14 @@
+<% if @item.was_my_claim_accepted?(current_user) %>
+  <h3>YOU GOT THE ITEM</h3>
+
+<% elsif @item.is_already_claimed(current_user) %>
+  <h3>SOMEONE ELSE GOT IT</h3>
+
+<% elsif @item.is_my_claim_denied?(current_user) %>
+  <h3>Your claim was denied</h3>
+
+<% else %>
+  <h3>Your claim is still pending</h3>
+  <% @claim = @item.claims.find_by(user: current_user) %>
+  <%= link_to "Delete Claim", item_claim_path(@item,@claim), method: :delete, class: 'btn btn-outline-danger', data: { confirm: "Are you sure?" } %>
+<% end %>

@@ -1,0 +1,10 @@
+<% if @item.claimed %>
+
+  <h3>ITEM CLAIMED</h3>
+
+<% else %>
+  <% @item.claims.each do |claim| %>
+    <%#= render partial: "claim", locals: { claim: claim }%>
+    <%= render "claim", claim: claim %>
+  <% end %>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="cards-show">
+  <% if @item.photo %>
+      <div class="card-img-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(@item.photo, crop: :fill) %>)">
+        <% end %>
+      </div>
+    <div class="info-cont-show">
+      <h4 class="mb0-show"><b><%= @item.name %></b></h4>
+      <p class="mb1-show"><%= @item.description %></p>
+      <p><i class="fas fa-map-marker-alt"></i><%= @item.location %></p>
+      <p>Posted on: <%= @item.created_at.strftime('%e %b %Y') %></p>
+    </div>
+    <div><%= cl_image_tag @item.user.photo, class: "avatar card-avatar-show" %>
+    </div>
+<!-- WHEN USER OWNS THE ITEM -->
+</div>
