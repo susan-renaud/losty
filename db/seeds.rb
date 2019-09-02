@@ -13,6 +13,7 @@ puts "Creating 3 users"
 susan = User.create(email: 'susan@email.com', password: '123456', photo:'https://trello-avatars.s3.amazonaws.com/09bb4e88ee957c6d92c0601e0dd362a1/50.png')
 raquel = User.create(email: 'raquel@email.com', password: '123456', photo: 'https://trello-avatars.s3.amazonaws.com/08bea5b387925b61f69ab76cb8760f92/50.png')
 steph = User.create(email: 'steph@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
+eric = User.create(email: 'eric@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60')
 
 puts "Creating 1 item each for 3 users"
 Item.create(user: susan, name: 'Jacket', remote_photo_url: 'https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80',
@@ -24,6 +25,11 @@ Item.create(user: steph, name: 'Backpack', remote_photo_url: 'https://images.uns
    description: 'This backpack was found in a restaurant in Canary Wharf.',
    location: 'Canary Wharf', question1: 'What brand is the backpack?', question2: 'What is inside the backpack?',
   question3: 'What restaurant was the backpack found in?')
+
+Item.create(user: eric, name: 'Dog', remote_photo_url: 'https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+   description: 'I found this very sweet small black dog while I was out walking my dog in Camden.',
+   location: 'Camden', question1: 'What is the name on the tag?', question2: 'Is the dog male or female?',
+  question3: 'What is the phone number on the tag?')
 
 Item.create(user: raquel, name: 'Wallet', remote_photo_url: 'https://images.unsplash.com/photo-1512414947060-048d53abb081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'I found this brown wallet today at the overground Hoxton stop.',
