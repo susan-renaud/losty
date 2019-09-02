@@ -1,0 +1,5 @@
+<% if @item.claimed %> <!-- already claimed -->
+  CLAIMED by someone else!
+<% else %> <!-- you CAN claim it! -->
+  <%= link_to "Claim Item", new_item_claim_path(@item), class: 'btn btn-outline-success' %>
+<% end %>
