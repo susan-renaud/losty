@@ -28,7 +28,7 @@ Item.create(user: steph, name: 'Backpack', remote_photo_url: 'https://images.uns
 
 Item.create(user: eric, name: 'Dog', remote_photo_url: 'https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'I found this very sweet small black dog while I was out walking my dog in Camden.',
-   location: 'Camden', question1: 'What is the name on the tag?', question2: 'Is the dog male or female?',
+   location: 'Camden, London', question1: 'What is the name on the tag?', question2: 'Is the dog male or female?',
   question3: 'What is the phone number on the tag?')
 
 Item.create(user: raquel, name: 'Wallet', remote_photo_url: 'https://images.unsplash.com/photo-1512414947060-048d53abb081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
