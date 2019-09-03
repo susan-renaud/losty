@@ -1,20 +1,38 @@
 <div class="container-fluid my-flexy container-show-page">
   <div class="dashboard-content">
     <div class="dashboard-content-section">
-      <span>Hello <%= current_user.email %>!</span>
+      <span>Your Awesome Dashboard</span>
       <details open>
         <summary>My Posts</summary>
         <div class="claim-content">
           <% current_user.items.each do |item| %>
-            <p><%= link_to item.name, item_path(item) %></p>
+            <div class="post-card">
+              <%= cl_image_tag item.photo %>
+              <div class="my-item-infos">
+              <span><%= link_to item.name, item_path(item) %></span>
+                <div class="item-location-date">
+                  <p><i class="fas fa-map-marker-alt"></i><%= item.location %></p>
+                  <p><i class="fas fa-calendar-alt"></i><%= item.created_at.strftime('%e %b %Y') %></p>
+                </div>
+              </div>
+            </div>
           <% end %>
         </div>
       </details>
+
       <details>
         <summary>My Claims</summary>
         <div class="claim-content">
           <% current_user.claims.each do |claim| %>
-            <p><%= link_to claim.item.name, item_path(claim.item)%></p>
+            <div class="post-card">
+              <%= cl_image_tag claim.item.photo %>
+                <div class="my-item-infos">
+                  <p><%= link_to claim.item.name, item_path(claim.item)%></p>
+                    <div class="item-location-date">
+                    <p><i class="fas fa-map-marker-alt"></i><%= claim.item.location %></p>
+                    <p><i class="fas fa-calendar-alt"></i><%= claim.item.created_at.strftime('%e %b %Y') %></p>
+                </div>
+              </div>
           <% end %>
         </div>
       </details>
