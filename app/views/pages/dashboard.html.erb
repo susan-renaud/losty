@@ -1,17 +1,29 @@
-<div class="container">
-  <h1>Hello!</h1>
-  <div class="posts-cards">
-    <h1>My Posts</h1>
-      <% current_user.items.each do |item| %>
-       <p><%= link_to item.name, item_path(item) %></p>
-      <% end %>
+<div class="container-fluid my-flexy container-show-page">
+  <div class="dashboard-content">
+    <div class="dashboard-content-section">
+      <span>Hello <%= current_user.email %>!</span>
+      <details open>
+        <summary>My Posts</summary>
+        <div class="claim-content">
+          <% current_user.items.each do |item| %>
+            <p><%= link_to item.name, item_path(item) %></p>
+          <% end %>
+        </div>
+      </details>
+      <details>
+        <summary>My Claims</summary>
+        <div class="claim-content">
+          <% current_user.claims.each do |claim| %>
+            <p><%= link_to claim.item.name, item_path(claim.item)%></p>
+          <% end %>
+        </div>
+      </details>
+    </div>
+    <div class="dashboard-content-section">
+      <span>My messages</span>
+    </div>
   </div>
-  <div class="claims-cards">
-    <h1>My Claims</h1>
-    <% current_user.claims.each do |claim| %>
-      <p><%= link_to claim.item.name, item_path(claim.item)%></p>
-    <% end %>
-  </div>
-  </div>
+</div>
+
 
 

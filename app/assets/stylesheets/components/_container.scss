@@ -15,12 +15,28 @@
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media(max-width: 576px) {
+    flex-direction: column;
+    margin-top: 40px;
+    height: auto;
+  }
 }
+
 .cont-lhs {
   width: 45%;
   position: absolute;
   left: 50px;
   top: 70px;
+
+  @media(max-width: 576px) {
+    order: 2;
+    position: relative;
+    width: 100%;
+    left: inherit;
+    bottom: inherit;
+    right: inherit;
+  }
 }
 
 .rhs-img {
@@ -29,6 +45,14 @@
   position: absolute;
   bottom: 0;
   right: 50px;
+
+  @media(max-width: 576px) {
+    order: 1;
+    position: relative;
+    width: 100%;
+    bottom: inherit;
+    right: inherit;
+  }
 }
 
 .item-link {

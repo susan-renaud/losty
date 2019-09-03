@@ -1,0 +1,27 @@
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  width: 100%;
+
+  .dashboard-content-section {
+    width: 48%;
+
+    details {
+      margin-bottom: 16px;
+
+      summary {
+        padding: 16px;
+        background-color: $green;
+        border-radius: 6px;
+        outline: none;
+      }
+
+      .claim-content {
+        padding: 16px;
+        background-color: white;
+      }
+    }
+  }
+}
+
