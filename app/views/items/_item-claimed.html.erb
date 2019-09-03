@@ -3,8 +3,10 @@
   <h3>ITEM CLAIMED</h3>
 
 <% else %>
-  <% @item.claims.each do |claim| %>
+  <% @item.claims.each_with_index do |claim, index| %>
     <%#= render partial: "claim", locals: { claim: claim }%>
-    <%= render "claim", claim: claim %>
+    <details <%= index + 1 == 1 ? 'open' : '' %> >
+      <%= render "claim", claim: claim, index: index%>
+    </details>
   <% end %>
 <% end %>

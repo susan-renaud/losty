@@ -1,11 +1,24 @@
+<summary>
+  Claimer Answers #<%= index + 1 %>
+</summary>
+
 <div class="claim">
-  <h1>Claimer Answers</h1>
-  <h5>Q1: <%= @item.question1 %></h5>
-  <p><%= claim.answer1 %></p>
-  <h5>Q2: <%= @item.question2 %></h5>
-  <p><%= claim.answer2 %></p>
-  <h5>Q3: <%= @item.question3 %></h5>
-  <p><%= claim.answer3 %></p>
-  <%= link_to "Accept Claim", accept_claim_path(claim), method: :post, class: 'btn btn-outline-success' %>
-  <%= link_to "Deny Claim", deny_claim_path(claim), method: :post, class: 'btn btn-outline-danger' %>
+  <p>
+    <div class="question">
+      <abbr><%= @item.question1 %></abbr>
+      <p><%= claim.answer1 %></p>
+    </div>
+    <div class="question">
+      <abbr><%= @item.question2 %></abbr>
+      <p><%= claim.answer2 %></p>
+    </div>
+    <div class="question">
+      <abbr><%= @item.question3 %></abbr>
+      <p><%= claim.answer3 %></p>
+    </div>
+    <div class="buttons-container">
+      <%= link_to "Accept Claim", accept_claim_path(claim), method: :post, class: 'btn btn-outline-success' %>
+      <%= link_to "Deny Claim", deny_claim_path(claim), method: :post, class: 'btn btn-outline-danger' %>
+    </div>
+  </p>
 </div>
