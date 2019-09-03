@@ -1,30 +1,50 @@
-<div class="container-fluid my-flexy">
+<div class="container-fluid my-flexy container-show-page">
 
-  <div class="card-box-show">
-    <%= render partial: "card-show" %>
-
-    <% if user_signed_in? %>
-
-      <% if @item.user == current_user %>
-
-        <%= link_to "Edit Item", edit_item_path(@item), class: 'btn btn-outline-warning' %>
-        <%= link_to "Delete Item", item_path(@item), method: :delete, class: 'btn btn-outline-danger', data: { confirm: "Are you sure?" } %>
-
-        <%= render "item-claimed" %><!-- ITEM-CLAIMED ( COMPLETED TRANSACTION ). -->
-
-      <% elsif @item.can_i_claim_it?(current_user) %>
-
-        <%= render "claiming-item" %><!-- claiming-item ( CLAIMER =>  I want to CLAIM it ) -->
-
-      <% else  %>
-
-        <%= render "after-claiming" %><!-- after-claim  -->
-
+  <div class="item-content">
+    <!-- ITEM DESCRIPTION -->
+    <div class="item">
+      <!-- ITEM IMAGE -->
+      <% if @item.photo %>
+        <div class="item-image" style="background-image: url(<%= cl_image_path(@item.photo, crop: :fill) %>);">
+          <%= cl_image_tag @item.user.photo %>
+        </div>
       <% end %>
+      <!-- ITEM DETAILS -->
+      <div class="item-details">
+        <span><%= @item.name %></span>
+        <!-- ADMIN ACTIONS -->
+        <div class="item-actions">
+          <% if user_signed_in? %>
+            <% if @item.user == current_user %>
+              <%= link_to edit_item_path(@item), class: 'small-link' do %>
+                <i class="far fa-edit"></i> Edit Item
+              <% end %>
+              <%= link_to item_path(@item), method: :delete, class: 'small-link', data: { confirm: "Are you sure?" } do %>
+                <i class="far fa-trash-alt"></i> Delete Item
+              <% end %>
+            <% end %>
+          <% end %>
+        </div>
+        <p><%= @item.description %></p>
+        <div class="item-infos">
+          <abbr><i class="fas fa-map-marker-alt"></i><%= @item.location %></abbr>
+          <abbr><i class="fas fa-calendar-alt"></i><%= @item.created_at.strftime('%e %b %Y') %></abbr>
+        </div>
+      </div>
+    </div>
 
-    <% end %><!-- // user_signed_in? -->
-
-    <h3>claims for this item <%= @item.claims.count %></h3>
+    <!-- NOODLE ACTIONS -->
+    <div class="actions">
+      <% if user_signed_in? %>
+        <% if @item.user == current_user %>
+          <%= render "item-claimed" %><!-- ITEM-CLAIMED ( COMPLETED TRANSACTION ). -->
+        <% elsif @item.can_i_claim_it?(current_user) %>
+          <%= render "claiming-item" %><!-- claiming-item ( CLAIMER =>  I want to CLAIM it ) -->
+        <% else  %>
+          <%= render "after-claiming" %><!-- after-claim  -->
+        <% end %>
+      <% end %><!-- // user_signed_in? -->
+    </div>
   </div>
 
   <div
@@ -33,5 +53,4 @@
     data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
-
 </div>
