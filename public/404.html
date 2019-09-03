@@ -12,57 +12,186 @@
     margin: 0;
   }
 
-  .rails-default-error-page div.dialog {
-    width: 95%;
-    max-width: 33em;
-    margin: 4em auto 0;
+  .image404 {
+    width: 700px;
   }
 
-  .rails-default-error-page div.dialog > div {
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 12% 0;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+
+
+
+
+  .navbar-lewagon {
+    justify-content: space-between;
+    background: white;
+    background-color: rgba(121,235,223,0.2);
+    display: flex;
+    align-items: center;
+    padding: 10px;
   }
 
-  .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
   }
 
-  .rails-default-error-page div.dialog > p {
-    margin: 0 0 1em;
-    padding: 1em;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  .navbar-lewagon .navbar-brand img {
+    width: 60px;
+    border-radius: 50%;
   }
+
+  .navbar-items {
+   padding:10px;
+  }
+
+  .collapse {
+    width:100%;
+  }
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .searchbar {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left:10px;
+  padding-bottom: 10px;
+  }
+  .flex {
+    display: flex;
+  }
+  #query {
+    width: 50vw;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .nav-item {
+  padding-top:10px;
+  margin-left:20px;
+  }
+
+  .nav-item #logout {
+  padding-left:10px;
+    }
+
+  .dashboard {
+    padding-top: 10px;
+  }
+
+  .form-control {
+    border-radius: 4px 0 0 4px;
+
+  }
+
+  .searchbtn {
+    border-radius: 0 4px 4px 0;
+    background-color: #79EBDF;
+    width: 7vw;
+    font-size: 14px;
+  }
+
+  .nav-link {
+    color: #605a5a;
+    text-decoration:none;
+    &:hover {
+    text-decoration:none;
+      color: #605a5a;
+    }
+  }
+
+  .message {
+    margin:0;
+    color: #605a5a;
+  }
+
+
+
+
+
+
+
+
+
+  /*.rails-default-error-page div.dialog > div {*/
+    /*border: 1px solid #CCC;*/
+    /*border-right-color: #999;*/
+    /*border-left-color: #999;*/
+    /*border-bottom-color: #BBB;*/
+    /*border-top: #B00100 solid 4px;*/
+    /*border-top-left-radius: 9px;*/
+    /*border-top-right-radius: 9px;*/
+    /*background-color: white;*/
+    /*padding: 7px 12% 0;*/
+    /*box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);*/
+  /*}*/
+
+  /*.rails-default-error-page h1 {*/
+    /*font-size: 100%;*/
+    /*color: #730E15;*/
+    /*/\line-height: 1.5em;*/
+  /*}*/
+
+  /*.rails-default-error-page div.dialog > p {*/
+    /*margin: 0 0 1em;*/
+    /*padding: 1em;*/
+    /*background-color: #F7F7F7;*/
+    /*border: 1px solid #CCC;*/
+    /*border-right-color: #999;*/
+    /*border-left-color: #999;*/
+    /*border-bottom-color: #999;*/
+    /*border-bottom-left-radius: 4px;*/
+    /*border-bottom-right-radius: 4px;*/
+    /*border-top-color: #DADADA;*/
+    /*color: #666;*/
+    /*box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);*/
+  /*}*/
+
+
+
   </style>
 </head>
-
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
+  <div class="navbar navbar-expand-sm navbar-light      navbar-lewagon">
+    <a href="/", class="navbar-brand">
+      <img src="/assets/Losty-4f6b9533019acd180305d491a8cfac3bfb963c528119f1da867a23ce9ed65368.png">
+    </a>
+
+
+
+    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
+      <!-- <ul class=""> -->
+
+        <a class="nav-link" href="/items">Lost Items</a>
+
+        <a class="nav-link" href="/items/new">Found something?</a>
+
+      <div class=searchbar>
+        <form class="flex" action="/items"    accept-charset="UTF-8" method="get">
+          <input name="utf8" type="hidden" value="✓">
+        <input type="text" name="query" id="query" class="form-control" placeholder="Find your item/pet!">
+        <input type="submit" name="commit" value="Search" class="btn btn-success searchbtn" data-disable-with="Search">
+
+        </form>
+      </div>
+    <!-- </ul> -->
+  <!-- </div> -->
+      <!-- \asd faDFAsdf -->
+</div>
+
   <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
-    <img src="/images/404.png" alt="Not Found">
+     <img class ="image404"src="/images/404.png" alt="Not Found">
+
+     <h2 class="message">Sorry, this page has gotten lost!</h2>
+     <br>
+    <a href="/" class="nav-link">Back to losty.me home</a>
+
+    <!-- <div> -->
+      <!-- <h1>The page you were looking for doesn't exist.</h1> -->
+      <!-- <p>You may have mistyped the address or the page may have moved.</p> -->
+    <!-- </div> -->
+    <!-- <p>If you are the application owner check the logs for more information.</p> -->
+
   </div>
 </body>
 </html>
