@@ -1,14 +1,15 @@
-<h1>Found Something?</h1>
+<div class="container">
+  <h1>Found Something?</h1>
 
-<%= simple_form_for(@item) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.input :description %>
-  <%= f.input :location %>
-  <%= f.input :question1 %>
-  <%= f.input :question2 %>
-  <%= f.input :question3 %>
-  <%= f.submit class: 'btn btn-success' %>
-<% end %>
-
+  <%= simple_form_for(@item) do |f| %>
+    <%= f.input :name, placeholder: "Set of Keys" %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.input :description, placeholder: "Set of keys found with Supermarket cards attached" %>
+    <%= f.input :location, placeholder: "Postcode, Area or City"%>
+    <%= f.input :question1, placeholder: "" %>
+    <%= f.input :question2, placeholder: "" %>
+    <%= f.input :question3, placeholder: "" %>
+    <%= f.submit class: 'btn btn-success' %>
+  <% end %>
+</div>
