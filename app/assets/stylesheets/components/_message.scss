@@ -31,12 +31,23 @@
     width: 48%;
     height: 100%;
 
-    input.ui.teal.labeled.submit.icon.button{
-      background-color: #79EBDF;
-      width: 100%;
+    .form-control {
+      height: 300px;
+      width: 500px;
     }
+
+    .field {
+      height: 300px;
+    }
+
   }
 }
+input.ui.teal.labeled.submit.icon.button{
+  background-color: #79EBDF;
+  width: 100%;
+  padding: 10px;
+}
+
 .ui.segment.boxer {
   width: 33%;
   position: relative;
