@@ -75,45 +75,52 @@
 }
 
 .container-found-page {
-  margin: 50px;
-  width: 90vw;
   display: flex;
-
-  .span {
-    padding: 36px;
-    font-size: 42px;
-    position: absolute;
-  }
-}
-
-.found-something-cont {
-  margin-top: 40px 0 0;
-  background-color: rgba(121,235,223,0.3);
-  display: inline-block;
-  width: 220vh;
-  height: 110vh;
-  padding: 0 2vw;
-  border-radius: 10px;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   position: relative;
-}
-  .img-lost {
-  height: 70%;
-  // padding-top: 56px;
-  position: absolute;
-  bottom: 0;
-  left: 20px;
+  width: 1140px;
+  margin: 30px auto 60px;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+
+  .found-something-cont-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D9F9F5;
+    width: 48%;
+    min-height: 100%;
+    overflow: hidden;
+
+    img {
+      max-width: 420px;
+    }
   }
 
   .found-something-cont-form {
-    top: 0;
-    padding-top: 12px;
-    position: absolute;
-    right: 30px;
-    width: 50%;
+    padding: 30px;
+    width: 48%;
+    height: 100%;
+
+    span {
+      display: block;
+      margin-bottom: 30px;
+      font-size: 32px;
+      font-weight: 100;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      float: right;
+      padding: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
   }
+}
+
 
 
 

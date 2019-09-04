@@ -67,6 +67,13 @@
           width: 320px;
           bottom: 0;
 
+          p {
+            display: block;
+            margin-bottom: 32px;
+            font-size: 26px;
+            font-weight: 600;
+          }
+
           abbr {
             font-size: 14px;
             text-transform: uppercase;

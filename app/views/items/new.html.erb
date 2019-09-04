@@ -1,18 +1,19 @@
 <div class="container-found-page">
-  <div class="found-something-cont">
-<img src="<%= image_path('lost.png') %>" alt="" class="img-lost">  <span class="span"><strong>Found Something?</strong></span>
-    <div class="found-something-cont-form">
-      <%= simple_form_for(@item) do |f| %>
-        <strong><%= f.input :name, placeholder: "Set of Keys" %></strong>
-        <strong><%= f.input :photo %></strong>
-        <strong><%= f.input :photo_cache, as: :hidden %></strong>
-        <strong><%= f.input :description, placeholder: "Set of keys found with Supermarket cards attached" %></strong>
-        <strong><%= f.input :location, placeholder: "Postcode, Area or City"%>
-        <strong><%= f.input :question1, placeholder: "" %></strong>
-        <strong><%= f.input :question2, placeholder: "" %></strong>
-        <strong><%= f.input :question3, placeholder: "" %></strong>
-        <%= f.submit class: 'btn btn-success' %>
-      <% end %>
-    </div>
+  <div class="found-something-cont-image">
+    <img src="<%= image_path('lost.png') %>" alt="" class="img-lost">
+  </div>
+  <div class="found-something-cont-form">
+    <span>Found Something?</span>
+    <%= simple_form_for(@item) do |f| %>
+      <strong><%= f.input :name, placeholder: "Set of Keys" %></strong>
+      <strong><%= f.input :photo %></strong>
+      <strong><%= f.input :photo_cache, as: :hidden %></strong>
+      <strong><%= f.input :description, placeholder: "Set of keys found with Supermarket cards attached" %></strong>
+      <strong><%= f.input :location, placeholder: "Postcode, Area or City"%>
+      <strong><%= f.input :question1, placeholder: "" %></strong>
+      <strong><%= f.input :question2, placeholder: "" %></strong>
+      <strong><%= f.input :question3, placeholder: "" %></strong>
+      <%= f.submit class: 'btn btn-success' %>
+    <% end %>
   </div>
 </div>
