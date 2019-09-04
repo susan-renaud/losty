@@ -1,7 +1,6 @@
 <% if @item.was_my_claim_accepted?(current_user) %>
   <h3>YOU GOT THE ITEM</h3>
   <%= link_to "Message #{@item.user.name}", conversations_path(sender_id: current_user, recipient_id: @item.user), method: :post, class: 'btn btn-outline-success' %>
-
 <% elsif @item.is_already_claimed(current_user) %>
   <h3>SOMEONE ELSE GOT IT</h3>
 
