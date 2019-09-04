@@ -1,31 +1,36 @@
-<div class="ui segment">
-  <% @messages.each do |message| %>
-    <% if message.body %>
-      <% user = User.find(message.user_id) %>
-      <div class="item">
-        <div class="content">
-          <div class="header"><strong><%= user.name %></strong> <div class="time"><%= message.message_time %></div>
-          </div>
-          <div class="list">
-            <div class="item">
-              <i class="right triangle icon"></i>
-              <%= message.body %>
+<div class="container-message">
+  <div class="message-cont-image">
+    <img src="<%= image_path('meetingpoint.png') %>" alt="" class="img-lost">
+  </div>
+  <div class="ui segment boxer">
+    <% @messages.each do |message| %>
+      <% if message.body %>
+        <% user = User.find(message.user_id) %>
+        <div class="item">
+          <div class="content">
+            <div class="header"><strong><%= user.name %></strong> <div class="time"><%= message.message_time %></div>
             </div>
-            <%=  %>
+            <div class="list">
+              <div class="item">
+                <i class="right triangle icon green"></i>
+                <%= message.body %>
+              </div>
+              <%=  %>
+            </div>
           </div>
         </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="message-cont-form">
+    <%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
+      <div class="field">
+        <%= f.text_area :body, class: "form-control" %>
+      </div>
+        <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
+      <div>
+        <%= f.submit "Send", class: "ui teal labeled submit icon button"  %>
       </div>
     <% end %>
-  <% end %>
+  </div>
 </div>
-
-<%= form_for [@conversation, @message], html: {class: "ui reply form"} do |f| %>
-  <div class="field">
-    <%= f.text_area :body, class: "form-control" %>
-  </div>
-    <%= f.text_field :user_id, value: current_user.id, type: "hidden"  %>
-  <div>
-    <%= f.submit "Add Reply", class: "ui blue labeled submit icon button" %>
-  </div>
-
-<% end %>

@@ -9,7 +9,7 @@
           <%= f.input :answer1, label: @item.question1, placeholder: "Place your answer here" %>
           <%= f.input :answer2, label: @item.question2, placeholder: "Place your answer here" %>
           <%= f.input :answer3, label: @item.question3, placeholder: "Place your answer here" %>
-          <%= f.input :reward, collection: %w(pizza beer hug smile) %>
+          <%= f.input :reward, collection: ["hello there"] %>
           <%= f.button :submit, class: 'btn btn-success'%>
         <% end %>
     </div>

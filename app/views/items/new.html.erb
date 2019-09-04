@@ -10,9 +10,10 @@
       <strong><%= f.input :photo_cache, as: :hidden %></strong>
       <strong><%= f.input :description, placeholder: "Set of keys found with Supermarket cards attached" %></strong>
       <strong><%= f.input :location, placeholder: "Postcode, Area or City"%>
-      <strong><%= f.input :question1, placeholder: "" %></strong>
-      <strong><%= f.input :question2, placeholder: "" %></strong>
-      <strong><%= f.input :question3, placeholder: "" %></strong>
+      <p class="question-info">To ensure the items go to the right owner, we ask you to pick a few question that best describe the found item and you would like the Claimer to answer.</p>
+      <strong><%= f.input :question1, placeholder: "", label: "First question" %></strong>
+      <strong><%= f.input :question2, placeholder: "", label: "Second question" %></strong>
+      <strong><%= f.input :question3, placeholder: "", label: "Third question" %></strong>
       <%= f.submit class: 'btn btn-success' %>
     <% end %>
   </div>
