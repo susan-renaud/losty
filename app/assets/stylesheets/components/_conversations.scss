@@ -12,12 +12,6 @@
     left: 0;
   }
 
-  .dashboard-title {
-  text-align: center;
-  }
-
-
-
   .dashboard-content-section {
     width: 48%;
 
@@ -44,32 +38,11 @@
         padding: 16px;
         background-color: white;
         border-radius: 6px;
-
-      .my-item-infos-message {
-      margin-left: 0px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      border-bottom: 1px solid #eaeaea;
-      padding-left: 10px;
-        }
       }
 
     .post-card {
       display: flex;
       margin-bottom: 14px;
-
-    .post-card-messages {
-      display: flex;
-      margin-bottom: 14px;
-
-      img.avatar {
-        width:40px;
-      }
-    }
-
-
 
       img {
     // position: relative;
@@ -96,7 +69,6 @@
       border-bottom: 1px solid #eaeaea;
       padding-left: 16px;
 
-
       .item-name {
         font-size: 26px;
         font-weight: 600;
@@ -113,8 +85,6 @@
         padding-top: 16px;
       }
     }
-
-
     .item-location-date {
       width: 100%;
       display: flex;
