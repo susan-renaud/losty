@@ -69,7 +69,53 @@
 
 .container {
   margin-top: 50px;
-  width: 50%;
+  width: 900%;
+  display: flex;
+
 }
+
+.container-found-page {
+  margin: 50px;
+  width: 90vw;
+  display: flex;
+
+  .span {
+    padding: 36px;
+    font-size: 42px;
+    position: absolute;
+  }
+}
+
+.found-something-cont {
+  margin-top: -30px;
+  background-color: rgba(121,235,223,0.3);
+  display: inline-block;
+  width: 220vh;
+  height: 110vh;
+  padding: 0 2vw;
+  border-radius: 10px;
+  // display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+  .img-lost {
+  height: 70%;
+  // padding-top: 56px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  }
+
+  .found-something-cont-form {
+    top: 0;
+    padding-top: 12px;
+    position: absolute;
+    right: 30px;
+    width: 50%;
+  }
+
+
+
 
 
