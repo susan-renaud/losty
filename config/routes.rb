@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :items do
     resources :claims, only: [:new, :create, :destroy]
   end
-  resources :conversations do
-    resources :messages
+  resources :conversations, only: [:index, :create]  do
+    resources :messages, only: [:index, :new, :create, :show]
   end
   get 'dashboard', to: 'pages#dashboard'
   post 'accept/:id', to: 'claims#accept', as: :accept_claim

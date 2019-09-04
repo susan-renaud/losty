@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.6.3'
-
+gem 'semantic-ui-rails'
 gem 'pg_search', '~> 2.3.0'
 gem 'geocoder'
 gem 'bootsnap', require: false
