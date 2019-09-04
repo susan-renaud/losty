@@ -1,7 +1,7 @@
 <div class="container-fluid my-flexy container-show-page">
   <div class="dashboard-content">
     <div class="dashboard-content-section">
-      <span>Your Awesome Dashboard</span>
+      <span class="span">Your Awesome Dashboard</span>
       <details open>
         <summary>My Posts</summary>
         <div class="claim-content">
@@ -9,7 +9,7 @@
             <div class="post-card">
               <%= cl_image_tag item.photo %>
               <div class="my-item-infos">
-              <span><%= link_to item.name, item_path(item) %></span>
+                <%= link_to item.name, item_path(item), class: 'item-name' %>
                 <div class="item-location-date">
                   <p><i class="fas fa-map-marker-alt"></i><%= item.location %></p>
                   <p><i class="fas fa-calendar-alt"></i><%= item.created_at.strftime('%e %b %Y') %></p>
@@ -27,7 +27,7 @@
             <div class="post-card">
               <%= cl_image_tag claim.item.photo %>
                 <div class="my-item-infos">
-                  <p><%= link_to claim.item.name, item_path(claim.item)%></p>
+                  <%= link_to claim.item.name, item_path(claim.item), class: 'item-name' %>
                     <div class="item-location-date">
                     <p><i class="fas fa-map-marker-alt"></i><%= claim.item.location %></p>
                     <p><i class="fas fa-calendar-alt"></i><%= claim.item.created_at.strftime('%e %b %Y') %></p>
@@ -38,8 +38,8 @@
       </details>
     </div>
     <div class="dashboard-content-section">
-      <span>My messages</span>
-  <%= render 'conversations/conversations' %>
+      <span class="span-my-message">My messages</span>
+      <%= render 'conversations/conversations' %>
     </div>
   </div>
 </div>

@@ -4,13 +4,30 @@
   padding: 60px;
   width: 100%;
 
+  .span {
+    margin: 120px 0 0 140px;
+    font-size: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
   .dashboard-content-section {
     width: 48%;
+
+    .span-my-message {
+      margin: 120px 140px 0 0;
+      font-size: 36px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
 
     details {
       margin-bottom: 16px;
 
       summary {
+        margin-top: 40px;
         padding: 16px;
         background-color: $green;
         border-radius: 6px;
@@ -31,7 +48,7 @@
     // position: relative;
       width: 100px;
       height: 100px;
-      border: 1px solid $green;
+      border-bottom: 1px solid #eaeaea
       }
 
       span {
@@ -49,8 +66,14 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      border: 1px solid $green;
+      border-bottom: 1px solid #eaeaea;
       padding-left: 16px;
+
+      .item-name {
+        font-size: 26px;
+        font-weight: 600;
+        color: black;
+      }
 
       p {
         margin-bottom: 4px;
@@ -65,59 +88,11 @@
     .item-location-date {
       width: 100%;
       display: flex;
+      font-size: 14px;
+      text-transform: uppercase;
+      opacity: .8;
     }
   }
-
-.post-image {
-  width: 100px;
-  min-width: 100px;
-  height: 100px;
-  background-position: center center;
-  background-size: cover;
-  border-radius: 3px;
-  // border: 2px solid $green;
-
-  img {
-    // position: relative;
-    width: 100px;
-    height: 100px;
-    border: 2px solid $green;
-  }
-
-   .item-details {
-          position: relative;
-          padding: 0 30px;
-          width: 100%;
-
-          span {
-            display: block;
-            margin-bottom: 32px;
-            font-size: 26px;
-            font-weight: 600;
-          }
-
-          p {
-            opacity: .8;
-          }
-
-          .my-item-infos {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            position: absolute;
-            width: 400px;
-            height: 100px;
-            bottom: 0;
-
-            abbr {
-              font-size: 14px;
-              text-transform: uppercase;
-              opacity: .8;
-            }
-          }
-        }
-      }
     }
   }
 }
