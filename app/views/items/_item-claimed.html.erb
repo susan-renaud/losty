@@ -1,8 +1,10 @@
 <% if @item.claimed %>
 
-  <h3>ITEM CLAIMED</h3>
-
-<% else %>
+   <h3>ITEM CLAIMED</h3>
+   <% @item.claims.each do |claim| %>
+    <%= link_to "Message #{claim.user.name}",  conversations_path(sender_id: @item.user,recipient_id: claim.user.id), method: :post ,class: 'btn btn-outline-success' %>
+    <% end %>
+  <% else %>
   <% @item.claims.each_with_index do |claim, index| %>
     <%#= render partial: "claim", locals: { claim: claim }%>
     <details <%= index + 1 == 1 ? 'open' : '' %> >
