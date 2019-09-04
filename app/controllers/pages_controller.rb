@@ -6,5 +6,10 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @users = User.all
+    @send = Conversation.where(sender: current_user)
+    @recipient = Conversation.where(recipient: current_user)
+    @conversations = @send + @recipient
+
   end
 end
