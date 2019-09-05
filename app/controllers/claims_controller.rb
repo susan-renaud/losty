@@ -29,7 +29,7 @@ class ClaimsController < ApplicationController
     @claim = Claim.find(params[:id])
     @item = @claim.item
     @claim.update(accepted: "false")
-    redirect_to dashboard_path
+    redirect_to @item
   end
 
   def destroy

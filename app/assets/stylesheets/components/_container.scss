@@ -120,6 +120,10 @@
       font-weight: 600;
     }
 
+      ::placeholder {
+        color: rgba(0,0,0,0.3);
+      }
+
     .nav-link-form-fp {
       position: relative;
       color: rgba(0,0,0,0.3);
@@ -143,12 +147,12 @@
         text-decoration: none;
       }
 
+    }
       .question-info {
         font-size: 12px;
         font-weight: 400;
         opacity: 0.3;
       }
-    }
   }
 }
 
