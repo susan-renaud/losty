@@ -3,62 +3,65 @@
   justify-content: space-between;
   position: relative;
   width: 1340px;
-  height: 620px;
-  margin: 30px auto 60px;
+  height: 560px;
+  margin: 36px auto 60px;
   background-color: white;
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
 
-  .message-cont-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #D9F9F5;
-    margin-right: 20px;
-    width: 34%;
-    min-height: 100%;
-    overflow: hidden;
+    input.ui.teal.labeled.submit.icon.button{
+      background-color: #79EBDF;
+      color: black;
+      width: 98%;
+      padding: 10px !important;
+    }
+
+    .ui.segment.boxer {
+      width: 25%;
+      position: absolute;
+      left: 481px;
+      height: 500px;
+      background-color: white;
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+      margin: 30px 10px 30px;
+      padding: 12px;
+      border-radius: 5px 5px 5px 5px;
+      box-sizing: border-box;
+      overflow-y: scroll;
+      font-size: 14px;
+    }
+
+    .message-cont-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #D9F9F5;
+      margin-right: 20px;
+      width: 34%;
+      min-height: 100%;
+      overflow: hidden;
 
     .img-lost {
       max-width: 420px;
     }
-
   }
-
   .message-cont-form {
+    position: absolute;
+    right: 0;
     padding: 30px;
-    width: 48%;
+    width: 38%;
     height: 100%;
 
     .form-control {
       height: 300px;
-      width: 500px;
+      width: 440px;
     }
 
     .field {
       height: 300px;
     }
-
   }
-}
-input.ui.teal.labeled.submit.icon.button{
-  background-color: #79EBDF;
-  width: 100%;
-  padding: 10px !important;
-}
-
-.ui.segment.boxer {
-  width: 33%;
-  position: relative;
-  background-color: white;
-  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  margin: 30px 10px 30px;
-  padding: 12px;
-  border-radius: 5px 5px 5px 5px;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  font-size: 14px;
 }
 
 .ui.labeled.icon.button {
