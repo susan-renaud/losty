@@ -45,7 +45,7 @@
 input.ui.teal.labeled.submit.icon.button{
   background-color: #79EBDF;
   width: 100%;
-  padding: 10px;
+  padding: 10px !important;
 }
 
 .ui.segment.boxer {
@@ -59,4 +59,10 @@ input.ui.teal.labeled.submit.icon.button{
   box-sizing: border-box;
   overflow-y: scroll;
   font-size: 14px;
+}
+
+.ui.labeled.icon.button {
+    // position: relative;
+    // padding-left: 0em !important;
+    // padding-right: 1.4em !important;
 }
