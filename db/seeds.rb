@@ -24,7 +24,7 @@ Item.create(user: steph, name: 'Backpack', remote_photo_url: 'https://images.uns
    location: 'Canary Wharf', question1: 'What brand is the backpack?', question2: 'What is inside the backpack?',
   question3: 'What restaurant was the backpack found in?')
 
-Item.create(user: susan, name: 'Jacket', remote_photo_url: 'https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80',
+Item.create(user: jessica, name: 'Jacket', remote_photo_url: 'https://images.unsplash.com/photo-1543076447-215ad9ba6923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1334&q=80',
    description: 'I found this denim jacket with fleece collar around Hyde Park.',
    location: 'Hyde Park', question1: 'What size is this jacket?', question2: 'What brand is the jacket?',
   question3: 'Is there anything in the pockets?')
