@@ -10,7 +10,7 @@
               <%= cl_image_tag item.photo %>
               <div class="my-item-infos">
                 <%= link_to item.name, item_path(item), class: 'item-name' %>
-                  <% if !item.claims.empty? %>
+                  <% if item.claims.present? %>
                     <i class="far fa-comment-dots"></i>
                     <% end %>
                 <div class="item-location-date">

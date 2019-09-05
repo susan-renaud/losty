@@ -1,0 +1,93 @@
+.dashboard-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  width: 100%;
+
+  .span {
+    margin: 120px 0 0 140px;
+    font-size: 36px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+    .dashboard-content-section {
+      width: 48%;
+
+      details {
+        margin-bottom: 16px;
+
+        summary {
+          margin-top: 40px;
+          padding: 16px;
+          background-color: $green;
+          border-radius: 6px;
+          outline: none;
+        }
+      }
+
+        .claim-content {
+          padding: 16px;
+          background-color: white;
+          border-radius: 6px;
+
+        .post-card-messages {
+          display: flex;
+          margin-bottom: 30px;
+
+          img.avatar {
+            width: 40px;
+            height:40px;
+            border-radius: 50%;
+          }
+        }
+
+        .my-item-infos-message {
+          margin-left: 0px;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border-bottom: 1px solid #eaeaea;
+          padding-left: 10px;
+
+          .my-item-infos {
+            margin-left: 0px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-bottom: 1px solid #eaeaea;
+            padding-left: 16px;
+
+          .item-name {
+            font-size: 26px;
+            font-weight: 600;
+            color: black;
+
+            span {
+              color: rgba(0, 0, 0, 0.7);
+              text-decoration: none;
+
+              span:hover {
+                color: rgba(0, 0, 0, 0.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.recipient-name {
+  font-size: 26px;
+  font-weight: 600;
+  color: black;
+  padding-left: 16px;
+
+  &:hover {
+    color: black;
+  }
+}

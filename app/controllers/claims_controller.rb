@@ -42,6 +42,6 @@ class ClaimsController < ApplicationController
   private
 
   def claim_params
-    params.require(:claim).permit(:answer1, :answer2, :answer3)
+    params.require(:claim).permit(:answer1, :answer2, :answer3, :reward)
   end
 end
