@@ -10,6 +10,9 @@
               <%= cl_image_tag item.photo %>
               <div class="my-item-infos">
                 <%= link_to item.name, item_path(item), class: 'item-name' %>
+                  <% if !item.claims.empty? %>
+                    <i class="far fa-comment-dots"></i>
+                    <% end %>
                 <div class="item-location-date">
                   <p><i class="fas fa-map-marker-alt"></i><%= item.location %></p>
                   <p><i class="fas fa-calendar-alt"></i><%= item.created_at.strftime('%e %b %Y') %></p>
