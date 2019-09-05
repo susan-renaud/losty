@@ -5,15 +5,15 @@
   <div class="found-something-cont-form">
     <span>Found Something?</span>
     <%= simple_form_for(@item) do |f| %>
-      <strong><%= f.input :name, placeholder: "Set of Keys" %></strong>
+      <strong><%= f.input :name, placeholder: "Phone" %></strong>
       <strong><%= f.input :photo %></strong>
       <strong><%= f.input :photo_cache, as: :hidden %></strong>
-      <strong><%= f.input :description, placeholder: "Set of keys found with Supermarket cards attached" %></strong>
+      <strong><%= f.input :description, placeholder: "I found this iPhone with a blue case." %></strong>
       <strong><%= f.input :location, placeholder: "Postcode, Area or City"%>
       <p class="question-info">To ensure the items go to the right owner, we ask you to pick a few question that best describe the found item and you would like the Claimer to answer.</p>
-      <strong><%= f.input :question1, placeholder: "", label: "First question" %></strong>
-      <strong><%= f.input :question2, placeholder: "", label: "Second question" %></strong>
-      <strong><%= f.input :question3, placeholder: "", label: "Third question" %></strong>
+      <strong><%= f.input :question1, placeholder: "What brand is the phone case?", label: "First question" %></strong>
+      <strong><%= f.input :question2, placeholder: "What is inside the case (besides the phone)?", label: "Second question" %></strong>
+      <strong><%= f.input :question3, placeholder: "What sticker is on the back of the phone case?", label: "Third question" %></strong>
       <%= f.submit class: 'btn btn-success' %>
     <% end %>
   </div>
