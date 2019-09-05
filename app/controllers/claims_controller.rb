@@ -22,7 +22,7 @@ class ClaimsController < ApplicationController
     @item = @claim.item
     @claim.update(accepted: "true")
     @item.update(claimed: true)
-    redirect_to dashboard_path
+    redirect_to @item
   end
 
   def deny
