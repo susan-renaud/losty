@@ -16,9 +16,13 @@
       <abbr><%= @item.question3 %></abbr>
       <p><%= claim.answer3 %></p>
     </div>
+      <div class=reward><%= cl_image_tag claim.user.photo, class: 'avatar' %><%= claim.user.name%> is offering this reward as a thank you ➾ <%= claim.reward %></div>
+
     <div class="buttons-container">
       <%= link_to "Accept Claim", accept_claim_path(claim), method: :post, class: 'btn btn-outline-success' %>
       <%= link_to "Deny Claim", deny_claim_path(claim), method: :post, class: 'btn btn-outline-danger' %>
     </div>
   </p>
 </div>
+
+
