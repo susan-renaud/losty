@@ -22,7 +22,7 @@ class ClaimsController < ApplicationController
     @item = @claim.item
     @claim.update(accepted: "true")
     @item.update(claimed: true)
-    redirect_to dashboard_path
+    redirect_to @item
   end
 
   def deny
@@ -42,6 +42,6 @@ class ClaimsController < ApplicationController
   private
 
   def claim_params
-    params.require(:claim).permit(:answer1, :answer2, :answer3)
+    params.require(:claim).permit(:answer1, :answer2, :answer3, :reward)
   end
 end
