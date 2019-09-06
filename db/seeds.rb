@@ -16,10 +16,13 @@ steph = User.create(email: 'steph@email.com', password: '123456', photo: 'https:
 eric = User.create(email: 'eric@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Eric')
 jacob = User.create(email: 'jacob@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Jacob')
 jessica = User.create(email: 'jessica@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Jessica')
+marco = User.create(email: 'marco@email.com', password: '123456', photo: 'https://avatars1.githubusercontent.com/u/34283479?s=460&v=4', name: 'Marco')
+francesca = User.create(email: 'francesca@email.com', password: '123456', photo: 'https://avatars3.githubusercontent.com/u/46482293?s=460&v=4', name: 'Francesca')
+
 
 puts "Creating 1 or 2 items each for 6 users"
 
-Item.create(user: steph, name: 'Backpack', remote_photo_url: 'https://images.unsplash.com/photo-1541267732407-8f72c182cf11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80',
+Item.create(user: francesca, name: 'Backpack', remote_photo_url: 'https://images.unsplash.com/photo-1541267732407-8f72c182cf11?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80',
    description: 'This backpack was found in a restaurant in Canary Wharf.',
    location: 'Canary Wharf', question1: 'What brand is the backpack?', question2: 'What is inside the backpack?',
   question3: 'What restaurant was the backpack found in?')
@@ -49,9 +52,9 @@ Item.create(user: jessica, name: 'Cat', remote_photo_url: 'https://images.unspla
    location: 'Brixton, London', question1: 'What name is on the collar?', question2: 'What phone number is on the collar?',
   question3: 'What is the name if the owner listed on the collar?')
 
-Item.create(user: raquel, name: 'Gloves', remote_photo_url: 'https://images.unsplash.com/photo-1515951806792-63ac4250f2f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+Item.create(user: marco, name: 'Gloves', remote_photo_url: 'https://images.unsplash.com/photo-1515951806792-63ac4250f2f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
    description: 'I found these winter gloves at the library.',
-   location: 'Kings Cross, London', question1: 'Are the adult or childrens gloves?', question2: 'What color is the lining?',
+   location: 'Kings Cross, London', question1: 'Are they adult or childrens gloves?', question2: 'What color is the lining?',
   question3: 'There is a stain on them, what color is it?')
 
 Item.create(user: raquel, name: 'Fancy fountain pen', remote_photo_url: 'https://images.unsplash.com/photo-1457298483369-0a95d2b17fcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
