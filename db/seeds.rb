@@ -31,8 +31,8 @@ Item.create(user: jessica, name: 'Jacket', remote_photo_url: 'https://images.uns
 
 Item.create(user: susan, name: 'Wallet', remote_photo_url: 'https://images.unsplash.com/photo-1512414947060-048d53abb081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'I found this brown wallet today at the overground Hoxton stop.',
-   location: 'Hoxton', question1: 'Which platform was it on?', question2: 'What brand is the wallet?',
-  question3: 'Anything that stands out inside of the wallet?')
+   location: 'Hoxton', question1: 'Which platform was it on at the Hoxton overground stop?', question2: 'What brand is the wallet?',
+  question3: 'Is there anything that stands out inside the wallet?')
 
 Item.create(user: eric, name: 'Dog', remote_photo_url: 'https://images.unsplash.com/photo-1537815749002-de6a533c64db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'I found this very sweet small black dog while I was out walking my dog in Camden.',
