@@ -1,6 +1,6 @@
 <% if @item.claimed %>
 
-   <h4>Well done! The rightful owner claimed it!</h4>
+   <h4>Well done! You found the rightful owner!</h4>
    <% @item.claims.where(accepted: "true").each do |claim| %>
     <%= link_to "Message #{claim.user.name}",  conversations_path(sender_id: @item.user,recipient_id: claim.user.id), method: :post ,class: 'btn btn-outline-success' %>
     <% end %>
