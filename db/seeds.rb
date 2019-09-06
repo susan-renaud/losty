@@ -29,7 +29,7 @@ Item.create(user: jessica, name: 'Jacket', remote_photo_url: 'https://images.uns
    location: 'Hyde Park', question1: 'What size is this jacket?', question2: 'What brand is the jacket?',
   question3: 'Is there anything in the pockets?')
 
-Item.create(user: raquel, name: 'Wallet', remote_photo_url: 'https://images.unsplash.com/photo-1512414947060-048d53abb081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+Item.create(user: susan, name: 'Wallet', remote_photo_url: 'https://images.unsplash.com/photo-1512414947060-048d53abb081?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'I found this brown wallet today at the overground Hoxton stop.',
    location: 'Hoxton', question1: 'Which platform was it on?', question2: 'What brand is the wallet?',
   question3: 'Anything that stands out inside of the wallet?')
@@ -54,7 +54,7 @@ Item.create(user: raquel, name: 'Gloves', remote_photo_url: 'https://images.unsp
    location: 'Kings Cross, London', question1: 'Are the adult or childrens gloves?', question2: 'What color is the lining?',
   question3: 'There is a stain on them, what color is it?')
 
-Item.create(user: susan, name: 'Fancy fountain pen', remote_photo_url: 'https://images.unsplash.com/photo-1457298483369-0a95d2b17fcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+Item.create(user: raquel, name: 'Fancy fountain pen', remote_photo_url: 'https://images.unsplash.com/photo-1457298483369-0a95d2b17fcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
    description: 'This is a really nice fountain pen and I am sure the owner is missing it!',
    location: 'SE9 6BT', question1: 'What color ink does it have?', question2: 'What color is the end of the pen?',
   question3: 'What name is etched on the cap of the fountain pen?')
