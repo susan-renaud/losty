@@ -10,8 +10,8 @@ Claim.destroy_all
 User.destroy_all
 
 puts "Creating 6 users"
-susan = User.create(email: 'susan@email.com', password: '123456', photo:'https://trello-avatars.s3.amazonaws.com/09bb4e88ee957c6d92c0601e0dd362a1/50.png', name: 'Susan')
-raquel = User.create(email: 'raquel@email.com', password: '123456', photo: 'https://trello-avatars.s3.amazonaws.com/08bea5b387925b61f69ab76cb8760f92/50.png', name: 'Raquel')
+susan = User.create(email: 'susan@email.com', password: '123456', photo:'https://avatars1.githubusercontent.com/u/47369528?s=460&u=b9cba1842317339ab2c0158b0bfa5c8881922636&v=4', name: 'Susan')
+raquel = User.create(email: 'raquel@email.com', password: '123456', photo: 'https://avatars2.githubusercontent.com/u/50963365?s=400&u=c41315fe96c11a3175cb44bb677a96145f264801&v=4', name: 'Raquel')
 steph = User.create(email: 'steph@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Steph')
 eric = User.create(email: 'eric@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Eric')
 jacob = User.create(email: 'jacob@email.com', password: '123456', photo: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60', name: 'Jacob')
